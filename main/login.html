@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Photography Login Page</title>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div style="align-items: center;" class="button-box">
+                <div id="btn"></div>
+                <button class="toggle-btn" type="button" onclick="login()"><strong>Log in</strong></button>
+                <button class="toggle-btn" type="button" onclick="register()"><strong>Register</strong></button>
+            </div>
+            <div style="align-items: center;" class="social-icons">
+                <i style="font-size: 20px;" class='fa fa-facebook-square'></i>
+                <i style="font-size: 20px;" class='fa fa-google-plus-square'></i>
+                <i style="font-size: 20px;" class='fa fa-twitter-square'></i>
+            </div>
+            <!--login form-->
+            <form name="myForm-log" id="login" action="../main/home.html" class="input-group" style="align-items: center;margin-top: 30px;">
+                <input id="email-login" type="email" name="femail" class="input-field" placeholder="Email Id"
+                    required>
+                <input od="pass" type="password" name="pass" class="input-field" placeholder="Enter Password"
+                    required>
+                <button id="login-btn" type="submit" class="submit-btn">Log In</button>
+            </form>
+            <!--registration form-->
+            <form name="myForm-reg" id="register" class="input-group" onsubmit="return validateForm()">
+                <input id="uid" type="text" name="userid" class="input-field" placeholder="UserId" required>
+                <input id="email-register" type="email" name="femail" class="input-field" placeholder="Email Id"
+                    required>
+                <input id="pass" type="password" name="pass" class="input-field" placeholder="Enter Password"
+                    required>
+                <button formaction="../main/home.html" id="register-btn" type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+        function register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+        function redirect() {
+           location.href='../main/home.html';
+        }
+    </script>
+</body>
+
+</html>
